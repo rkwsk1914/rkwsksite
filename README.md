@@ -78,3 +78,37 @@ heroku config:set APP_KEY=
 ```
 heroku run php artisan migrate
 ```
+
+# 注意
+## 403 500エラーのときのデバッグ表示の設定
+config/app.php の下記の設定を「true」に変更するとデバッグモードがONになる。
+```
+'debug' => (bool) env('APP_DEBUG', false)
+```
+
+## アセットの対応および注意
+Laravelのヘルパ関数 asset() の対応。
+ローカル開発では問題ないが、公開前に対応が必要
+https: プロトコルで公開が、読み込みパスが http: のため下記のエラーが発生してしまう。
+Mixed Content: ~ This request has been blocked; the content must be served over HTTPS.
+
+### /app/Providers/AppServiceProvider.php にグローバル変数を設定
+viewコンポーネント共有するグローバル変数「is_production」を定義。
+ヘルパ関数 asset() の第2引数に設定する。
+```
+    public function boot()
+    {
+        $is_production = env('APP_ENV') === 'production' ? true : false;
+        view()->share('is_production', $is_production);
+    }
+```
+▼ 例　public ディレクトリ配下に作成したのアセットファイルを参照
+環境変数「APP_ENV」が 'production' なら https: プロトコルで参照。
+違う場合は http: プロトコルで参照。
+```
+asset('assets/js/s/arrow-animation.js', $is_production)
+```
+###Heorkuの環境変数を設定
+```
+heroku config:set APP_ENV=production
+```
