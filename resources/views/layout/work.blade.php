@@ -13,7 +13,7 @@
         @endslot
     @endcomponent
 
-    <link rel="stylesheet" href={{ asset('assets/common/css/common.css') }}>
+    <link rel="stylesheet" href={{ asset('assets/common/css/common.css', $is_production) }}>
     {{$orign_stylesheet}}
 </head>
 

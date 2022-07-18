@@ -9,8 +9,8 @@ test
 @endslot
 
 @slot('orign_stylesheet')
-<link rel="stylesheet" href={{ asset('assets/work/work1/css/shared/cms-style.css') }}>
-<link rel="stylesheet" href={{ asset('assets/work/work1/css/shared/substyle.css') }}>
+<link rel="stylesheet" href={{ asset('assets/work/work1/css/shared/cms-style.css', $is_production) }}>
+<link rel="stylesheet" href={{ asset('assets/work/work1/css/shared/substyle.css', $is_production) }}>
 @endslot
 
 @slot('page_title')
@@ -43,11 +43,11 @@ test
 @endslot
 
 @slot('orign_script')
-<script src={{ asset('assets/common/js/common.js') }}></script>
-<script src={{ asset('assets/work/work1/js/shared/index.js') }} defer></script>
-<script src={{ asset('assets/work/work1/js/p/arrow-animation.js') }} type="text/javascript" defer
+<script src={{ asset('assets/common/js/common.js', $is_production) }}></script>
+<script src={{ asset('assets/work/work1/js/shared/index.js', $is_production) }} defer></script>
+<script src={{ asset('assets/work/work1/js/p/arrow-animation.js', $is_production) }} type="text/javascript" defer
     media="screen and (min-width: 576px)"></script>
-<script src={{ asset('assets/work/work1/js/s/arrow-animation.js') }} type="text/javascript" defer
+<script src={{ asset('assets/work/work1/js/s/arrow-animation.js', $is_production) }} type="text/javascript" defer
     media="screen and (m-width: 576px)"></script>
 @endslot
 
