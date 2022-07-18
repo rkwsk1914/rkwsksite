@@ -1,0 +1,52 @@
+@import "./../common/responsive.scss";
+
+.simulator-modal__under-result-box {
+  width: 355px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  background-color: #fff;
+  padding: 20px 40px;
+  box-sizing: border-box;
+
+  @media(max-width: 576px) {
+    width: responsivePx(354);
+    padding: responsivePx(25) responsivePx(20) responsivePx(25);
+  }
+
+  &__sub-text {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0 0 15px 0;
+    text-align: center;
+
+    @media(max-width: 576px) {
+      margin: 0 0 responsivePx(8) 0;
+    }
+
+    a {
+      &,
+      &:hover,
+      &:active,
+      &:focus,
+      &:visited {
+        color: #4C7EE4!important;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .simulator-modal-value {
+    font-size: 12px;
+  }
+
+  .simulator-button {
+    &--blue,
+    &--white {
+      margin: 20px auto 0;
+
+      @media(max-width: 576px) {
+        margin: responsivePx(10) auto 0;
+      }
+    }
+  }
+}

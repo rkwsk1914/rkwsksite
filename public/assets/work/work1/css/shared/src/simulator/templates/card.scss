@@ -1,0 +1,207 @@
+@import "./../common/responsive.scss";
+
+.simulator-modal__card {
+  background-color: #fff;
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 10px;
+  display: none;
+
+  @media (max-width: 576px) {
+    width: responsivePx(335);
+    max-width: responsivePx(335);
+  }
+
+  &__head {
+    position: relative;
+    padding: 45px 0 20px;
+
+    @media (max-width: 576px) {
+      padding: responsivePx(45) 0 responsivePx(13);
+    }
+
+    .simulator-modal__step-label {
+      position: absolute;
+      top: -2px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (max-width: 576px) {
+        top: responsivePx(-2);
+      }
+    }
+
+    &__title {
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+
+      @media (max-width: 576px) {
+        font-size: responsivePx(16);
+      }
+    }
+  }
+
+  &__body {
+    padding: 26px 100px 28px;
+    border-top: 1px solid #ddd;
+    min-height: 120px;
+
+    @media (max-width: 576px) {
+      padding: responsivePx(30) responsivePx(20) responsivePx(20);
+      min-height: responsivePx(170);
+    }
+
+    &__content {
+      position: relative;
+
+      &__inpu-area {
+        & > *:not(:first-child) {
+          margin: 15px 0 0 0;
+        }
+
+        @media (min-width: 576px) {
+          &.u-pc-column-2 {
+            display: flex;
+            flex-wrap: wrap;
+
+            & > *:not(:nth-child(1)):not(:nth-child(2)) {
+              margin: 15px 0 0 0;
+            }
+
+            & > *:nth-child(2) {
+              margin: 0;
+            }
+
+            .simulator-input--radio,
+            .simulator-input--checkbox {
+              width: 50%;
+            }
+          }
+
+          &.u-pc-column-3 {
+            display: flex;
+            flex-wrap: wrap;
+
+            & > *:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
+              margin: 15px 0 0 0;
+            }
+
+            & > *:nth-child(2),
+            & > *:nth-child(3) {
+              margin: 0;
+            }
+
+            .simulator-input--radio,
+            .simulator-input--checkbox {
+              width: 33%;
+            }
+          }
+        }
+
+        @media (max-width: 576px) {
+          &.u-sp-column-2 {
+            display: flex;
+            flex-wrap: wrap;
+
+            & > *:not(:nth-child(1)):not(:nth-child(2)) {
+              margin: responsivePx(15) 0 0 0;
+            }
+
+            & > *:nth-child(2) {
+              margin: 0;
+            }
+
+            .simulator-input--radio,
+            .simulator-input--checkbox {
+              width: 50%;
+            }
+          }
+
+          &.u-sp-column-3 {
+            display: flex;
+            flex-wrap: wrap;
+
+            & > *:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
+              margin: responsivePx(15) 0 0 0;
+            }
+
+            & > *:nth-child(2),
+            & > *:nth-child(3) {
+              margin: 0;
+            }
+
+            .simulator-input--radio,
+            .simulator-input--checkbox {
+              width: 33%;
+            }
+          }
+        }
+      }
+
+      img {
+        position: absolute;
+        height: auto;
+        z-index: 1;
+
+        &.img-quiz-boy-using-smartphone {
+          bottom: -17px;
+          right: 0;
+          width: 56px;
+
+          @media (max-width: 576px) {
+            bottom: responsivePx(-17);
+            width: responsivePx(56);
+            right: responsivePx(-9);
+          }
+        }
+
+        &.img-quiz-boy-smile {
+          bottom: -60px;
+          right: -14px;
+          width: 68px;
+
+          @media (max-width: 576px) {
+            bottom: responsivePx(-65);
+            right: responsivePx(-4);
+            width: responsivePx(68);
+          }
+        }
+
+        &.img-quiz-boy-surprised {
+          bottom: -65px;
+          right: -16px;
+          width: 64px;
+
+          @media (max-width: 576px) {
+            bottom: responsivePx(-55);
+            right: responsivePx(-9);
+            width: responsivePx(64);
+          }
+        }
+      }
+    }
+
+    .simulator-button--blue,
+    .simulator-button--white {
+      margin: 30px auto 0;
+
+      @media (max-width: 576px) {
+        margin: responsivePx(30) auto 0;
+      }
+    }
+  }
+
+  .simulator-modal__close-btn {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    transform: translate(50%, -50%);
+    z-index: 1;
+
+    @media (max-width: 576px) {
+      right: responsivePx(12);
+    }
+  }
+}

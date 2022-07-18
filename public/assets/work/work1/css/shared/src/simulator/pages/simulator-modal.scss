@@ -1,0 +1,65 @@
+@import "./../common/responsive.scss";
+
+.simulator-modal {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  background: rgba($color: #000000, $alpha: 0.75);
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 101;
+
+  &.close {
+    display: none;
+  }
+
+  &.open {
+    display: block;
+    overflow-y: scroll;
+  }
+
+  &__wallpaper {
+    display: block;
+    position: relative;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__card {
+    position: relative;
+    margin: 115px auto 270px;
+    z-index: 1;
+
+    @media(max-width: 576px) {
+      margin: responsivePx(55) responsivePx(20) responsivePx(280);
+    }
+
+    &#Q1 {
+      display: block;
+    }
+
+    &#Result {
+      margin: 45px auto 90px;
+
+      @media(max-width: 576px) {
+        margin: responsivePx(34) responsivePx(20) responsivePx(210);
+      }
+    }
+
+  }
+
+  &__under-result-box {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    @media(max-width: 576px) {
+      bottom: responsivePx(12);
+    }
+  }
+}

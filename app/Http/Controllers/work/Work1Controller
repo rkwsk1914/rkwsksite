@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Http\Controllers\work;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class Work1Controller extends Controller
+{
+    public function index()
+    {
+        return view('work/work1/index');
+    }
+}

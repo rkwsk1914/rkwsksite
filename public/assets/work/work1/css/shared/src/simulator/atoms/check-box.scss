@@ -1,0 +1,80 @@
+.simulator-input--checkbox {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 15px;
+  cursor: pointer;
+
+  @media(max-width: 576px) {
+    font-size: responsivePx(15);
+  }
+
+  &__hidden {
+    display: none;
+  }
+
+  &__hidden + &__checkbox {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    border: solid 2px #ddd;
+    background-color: #fff;
+    margin: 0 10px 0 0;
+
+    @media(max-width: 576px) {
+      width: responsivePx(22);
+      min-width: responsivePx(22);
+      height: responsivePx(22);
+      margin: 0 responsivePx(10) 0 0;
+    }
+  }
+
+  &__hidden:checked + &__checkbox {
+    border: solid 2px #FC0033;
+    background-color: #FC0033;
+  }
+
+  &__hidden:disabled:checked + &__checkbox {
+    border: solid 2px #ccc;
+    background-color: #ccc;
+  }
+
+  &__hidden:checked + &__checkbox::after {
+    content: "\02713";
+    color: #fff;
+    position: absolute;
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: none;
+    text-align: center;
+    font-weight: bold;
+    line-height: 22px;
+    font-size: 23px;
+    font-family: "ヒラギノ角ゴ Pro", Helvetica, Arial,
+      "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "モリサワ 新ゴ R",
+      "Droid Sans", メイリオ, "sans-serif";
+
+    @media (max-width: 576px) {
+      width: responsivePx(22);
+      min-width: responsivePx(22);
+      height: responsivePx(22);
+      line-height: responsivePx(22);
+      font-size: responsivePx(23);
+    }
+  }
+
+  &__text {
+    line-height: 1.1;
+
+    small {
+      font-size: 10px;
+
+      @media(max-width: 576px) {
+        font-size: responsivePx(10);
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.simulator-note {
+  &__item {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    line-height: 16px;
+    font-size: 10px;
+
+    @media(max-width: 576px) {
+      line-height: responsivePx(16);
+      font-size: responsivePx(10);
+    }
+
+    &__number {
+      margin: 0 5px 0 0;
+
+      @media(max-width: 576px) {
+        margin: 0 responsivePx(5) 0 0;
+      }
+    }
+
+    &__dot {
+      margin: 0 10px 0 0;
+
+      @media(max-width: 576px) {
+        margin: 0 responsivePx(10) 0 0;
+      }
+    }
+
+    &__content {
+      strong {
+        color: inherit;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    a {
+      &,
+      &:hover,
+      &:focus,
+      &:visited,
+      &:active {
+        color: #4c7ee4;
+        text-decoration: none;
+      }
+    }
+  }
+}

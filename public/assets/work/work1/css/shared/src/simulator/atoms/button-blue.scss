@@ -1,0 +1,150 @@
+@keyframes slideBlinkRight {
+  from {
+    opacity: 0;
+    right: 28px;
+  }
+  to {
+    opacity: 1;
+    right: 18px;
+  }
+}
+
+@keyframes slideBlinkLeft {
+  from {
+    opacity: 0;
+    left: 28px;
+  }
+  to {
+    opacity: 1;
+    left: 18px;
+  }
+}
+
+@keyframes slideBlinkRightSP {
+  from {
+    opacity: 0;
+    right: responsivePx(28);
+  }
+  to {
+    opacity: 1;
+    right: responsivePx(18);
+  }
+}
+
+@keyframes slideBlinkLeftSP {
+  from {
+    opacity: 0;
+    left: responsivePx(28);
+  }
+  to {
+    opacity: 1;
+    left: responsivePx(18);
+  }
+}
+
+.simulator-button--blue {
+  outline: none;
+  appearance: none;
+  border: none;
+  padding: 0 12px;
+  display: block;
+  color: #fff;
+  width: auto;
+  min-width: 120px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 30px;
+  background-color: #4c7ee4;
+  font-weight: bold;
+  font-size: 12px;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #4c7ee4;
+  transition: background-color 0.2s ease-in;
+
+  @media(max-width: 576px) {
+    padding: 0 responsivePx(12);
+    min-width: responsivePx(120);
+    height: responsivePx(35);
+    line-height: responsivePx(35);
+    font-size: responsivePx(12);
+  }
+
+  &.open {
+    display: block;
+  }
+
+  &.close {
+    display: none;
+  }
+
+  &:hover {
+    background-color: #5d8be8;
+    border: 1px solid #5d8be8;
+  }
+
+  &:disabled {
+    &,
+    &:hover {
+      background-color: #ccc;
+      border: 1px solid #ccc;
+    }
+  }
+
+  &[data-arrow="right"] {
+    text-indent: -8px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-right: 2px solid #fff;
+      border-top: 2px solid #fff;
+      top: 54%;
+      right: 18px;
+      transform: translate(0%, -50%) rotate(45deg);
+      animation: slideBlinkRight 1s linear infinite;
+
+      @media(max-width: 576px) {
+        width: responsivePx(4);
+        height: responsivePx(4);
+        top: 54%;
+        right: responsivePx(18);
+        animation: slideBlinkRightSP 1s linear infinite;
+      }
+    }
+  }
+
+  &[data-arrow="left"] {
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-left: 2px solid #fff;
+      border-top: 2px solid #fff;
+      top: 54%;
+      left: 18px;
+      transform: translate(0%, -50%) rotate(-45deg);
+      animation: slideBlinkLeft 1s linear infinite;
+
+      @media(max-width: 576px) {
+        width: responsivePx(4);
+        height: responsivePx(4);
+        top: 54%;
+        left: responsivePx(18);
+        animation: slideBlinkLeftSP 1s linear infinite;
+      }
+    }
+  }
+
+  &:disabled[data-arrow="right"],
+  &:disabled[data-arrow="left"] {
+    &::after {
+      animation: none;
+    }
+  }
+}

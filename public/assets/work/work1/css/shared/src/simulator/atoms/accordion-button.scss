@@ -1,0 +1,53 @@
+.simulator-modal__accrodion {
+  &__button {
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+
+    outline: none;
+    appearance: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background: transparent;
+
+    &__icon {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #000;
+      display: block;
+      position: relative;
+
+      &::after,
+      &::before {
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        background-color: #fff;
+      }
+
+      &::before {
+        height: 1px;
+        width: 6px;
+      }
+
+      &::after {
+        height: 1px;
+        width: 6px;
+      }
+
+      &.close {
+        &::before {
+          width: 1px;
+          height: 6px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+$addtional-bubble-color: #000;
+
+.simulator-modal__addtional-bubble {
+  background-color: $addtional-bubble-color;
+  padding: 10px;
+  border-radius: 8px;
+  width: 400px;
+  position: relative;
+  margin-bottom: 15px;
+
+  &::after {
+    content: "";
+    display: block;
+    background-color: $addtional-bubble-color;
+    //background-color: red;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  &__content {
+    color: #fff;
+    font-size: 14px;
+
+    strong {
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+
+  &__note-list {
+    &__item {
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      line-height: 16px;
+      font-size: 10px;
+      color: #cecece;
+
+      &__burette {
+        margin: 0 5px 0 0;
+      }
+
+      &__content {}
+
+      a {
+        color: #4c7ee4;
+        text-decoration: none;
+      }
+    }
+  }
+
+}

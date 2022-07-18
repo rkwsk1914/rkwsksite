@@ -1,0 +1,33 @@
+.simulator-button--banner {
+  outline: none;
+  appearance: none;
+  border: none;
+  background: none;
+  display: block;
+  color: #fff;
+  width: auto;
+  position: relative;
+  box-sizing: border-box;
+  transition: opacity 0.2s ease-in;
+  padding: 0;
+
+  &.open {
+    display: block;
+  }
+
+  &.close {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:disabled {
+    &,
+    &:hover {
+      pointer-events: none;
+      cursor: auto;
+    }
+  }
+}

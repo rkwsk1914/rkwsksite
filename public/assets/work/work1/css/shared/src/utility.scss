@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: "mplus-1c-heavy";
+	src: url("./font-data/mplus-1c-heavy.eot");
+	src: url("./font-data/mplus-1c-heavy.eot?#iefix") format("embedded-opentype"), url("./font-data/mplus-1c-heavy.woff") format("woff"), url("./font-data/mplus-1c-heavy.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("./font-data/Roboto-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Murecho";
+  src: url("./font-data/Murecho-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Murecho";
+  src: url("./font-data/Murecho-Bold.ttf") format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Murecho";
+  src: url("./font-data/Murecho-Light.ttf") format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Murecho";
+  src: url("./font-data/Murecho-Medium.ttf") format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Murecho";
+  src: url("./font-data/Murecho-Regular.ttf") format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Murecho";
+  src: url("./font-data/Murecho-Bold.ttf") format('truetype');
+  font-weight: 700;
+}
+
+.u {
+	&-font {
+		&-mplus {
+			font-family:'mplus-1c-heavy', 'ヒラギノ角ゴ Pro', Helvetica, Arial, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'モリサワ 新ゴ R', 'Droid Sans', メイリオ, 'sans-serif';
+		}
+
+		&-robot {
+			font-family:'Roboto', 'ヒラギノ角ゴ Pro', Helvetica, Arial, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'モリサワ 新ゴ R', 'Droid Sans', メイリオ, 'sans-serif';
+		}
+
+		&-murecho {
+			font-family:'Murecho', 'ヒラギノ角ゴ Pro', Helvetica, Arial, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'モリサワ 新ゴ R', 'Droid Sans', メイリオ, 'sans-serif';
+		}
+
+		&-white {
+			color: #fff!important;
+		}
+
+		&-wineRed {
+			color: #cc0000!important;
+		}
+	}
+}
+
+@media(max-width: 576px) {
+	.u {
+		&-sp {
+			&-d {
+				&-n {
+					display: none!important;
+				}
+			}
+	
+			@for $i from 0 through 1000 {
+				&-mt-#{$i} {
+					margin-top: $i + px!important;
+				}
+			}
+	
+			@for $i from 0 through 1000 {
+				&-mb-#{$i} {
+					margin-bottom: $i + px!important;
+				}
+			}
+	
+			@for $i from 0 through 300 {
+				&-fs-#{$i} {
+					font-size: responsivePx($i)!important;
+				}
+			}
+		}
+	}
+}
+
+@media(min-width: 576px) {
+	.u {
+		&-pc {
+			&-d {
+				&-n {
+					display: none!important;
+				}
+			}
+	
+			@for $i from 0 through 1000 {
+				&-mt-#{$i} {
+					margin-top: $i + px!important;
+				}
+			}
+	
+			@for $i from 0 through 1000 {
+				&-mb-#{$i} {
+					margin-bottom: $i + px!important;
+				}
+			}
+	
+			@for $i from 0 through 300 {
+				&-fs-#{$i} {
+					font-size: $i + px!important;
+				}
+			}
+		}
+	}
+}

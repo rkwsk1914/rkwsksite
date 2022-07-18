@@ -1,0 +1,26 @@
+.simulator-modal__accrodion {
+  &__content {
+    overflow: hidden;
+    transition: height 0.3s ease;
+    position: relative;
+  }
+
+  &__sub-text {
+    margin: 10px 0 0;
+    font-size: 12px;
+    text-align: center;
+
+    @media(max-width: 576px) {
+      margin: responsivePx(10) 0 0 0;
+      font-size: responsivePx(12);
+    }
+
+    &.open {
+      display: none;
+    }
+
+    &.close {
+      display: block;
+    }
+  }
+}
