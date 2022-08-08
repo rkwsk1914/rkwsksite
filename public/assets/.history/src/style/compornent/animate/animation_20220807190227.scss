@@ -1,0 +1,49 @@
+@keyframes slideBlinkRight {
+  from {
+    opacity: 0;
+    right: 28px;
+  }
+
+  to {
+    opacity: 1;
+    right: 18px;
+  }
+}
+
+
+@keyframes slideBlinkRightSP {
+  from {
+    opacity: 0;
+    right: responsivePx(28);
+  }
+
+  to {
+    opacity: 1;
+    right: responsivePx(18);
+  }
+}
+
+@keyframes slideBlinkLeftt {
+  from {
+    opacity: 0;
+    left: 28px;
+  }
+
+  to {
+    opacity: 1;
+    left: 18px;
+  }
+}
+
+
+@keyframes slideBlinkLefttSP {
+  from {
+    opacity: 0;
+    right: responsivePx(28);
+  }
+
+  to {
+    opacity: 1;
+    right: responsivePx(18);
+  }
+}

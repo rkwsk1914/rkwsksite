@@ -1,0 +1,18 @@
+.parallelogram-title {
+  background-image: url(/assets/work/work1/img/shared/bg-sub-title-label.png);
+  background-size: cover;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  color: #000;
+  font-size: 15px;
+  background-repeat: no-repeat;
+
+  @media(max-width: 576px) {
+    font-size: responsivePx(15);
+  }
+
+  span {
+    color: #FC0033;
+  }
+}

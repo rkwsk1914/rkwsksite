@@ -1,0 +1,160 @@
+/* ---------------------------------------------------------------------------------
+  original import
+--------------------------------------------------------------------------------- */
+@import "./../../compornent/font-data.scss";
+@import "./../../compornent/reset.scss";
+@import "./../../compornent/responsive.scss";
+
+.site-container {
+  &__box {
+    $bg-color-work: #6e6259;
+    background-color: $bg-color-work!important;
+    color: #fff;
+
+    &__title {
+      &::before {
+        color: $bg-color-work!important;
+      }
+    }
+  }
+}
+
+.container {
+  h2 {
+    font-size: 60px;
+
+    @media(max-width: 576px) {
+      font-size: responsivePx(50);
+    }
+  }
+
+  section + h2 {
+    margin: 60px 0 0 0;
+
+    @media(max-width: 576px) {
+      margin: responsivePx(50) 0 0 0;
+    }
+  }
+}
+
+.first-message {
+  margin: 0 0 60px 0;
+  text-align: center;
+  font-size: 22px;
+
+  @media(max-width: 576px) {
+    font-size: responsivePx(15);
+  }
+
+  span {
+    color: #ffd700;
+    display: inline-block;
+    font-size: 28px;
+    padding: 0 5px;
+
+    @media(max-width: 576px) {
+      padding: 0 responsivePx(3);
+      font-size: responsivePx(19)
+    }
+  }
+}
+
+.first-view {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  @media(max-width: 576px) {
+    flex-wrap: wrap;
+  }
+
+  &__left {
+    display: block;
+    width: 40%;
+
+    @media(max-width: 576px) {
+      width: 100%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__right {
+    display: block;
+    font-size: 18px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    width: 60%;
+
+    @media(max-width: 576px) {
+      font-size: responsivePx(13.2);
+      margin: responsivePx(30) 0 0 0;
+      width: 100%;
+    }
+
+    h3 {
+      font-size: 40px;
+      margin-bottom: 30px;
+
+      @media(max-width: 576px) {
+        font-size: responsivePx(40);
+      }
+
+      small {
+        font-size: 20px;
+
+        @media(max-width: 576px) {
+          font-size: responsivePx(20);
+        }
+      }
+    }
+  }
+}
+
+table {
+  font-size: 20px;
+  width: 80%;
+  margin: 0 auto;
+
+  @media(max-width: 576px) {
+    width: 100%;
+    font-size: responsivePx(16);
+    margin: responsivePx(20) 0 0 0;
+  }
+
+  .background-table-col {
+    col:nth-child(1) {
+      width: 40%;
+    }
+  }
+
+  .skill-table-col {
+    col:nth-child(1) {
+      width: 40%;
+    }
+  }
+
+  thead {
+  }
+
+  tbody {
+  }
+
+  tr {
+    td,th {
+      padding: 20px;
+
+      @media(max-width: 576px) {
+        vertical-align: baseline;
+        padding: responsivePx(10);
+      }
+    }
+
+    th {
+      text-align: left;
+    }
+  }
+}

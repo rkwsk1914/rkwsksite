@@ -1,0 +1,42 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+// @import "custom";
+@import "locomotive-scroll/dist/locomotive-scroll.min.css";
+
+body {
+  background-color: #ccc;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+section {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+section:nth-child(2n) {
+  background-color: red;
+}
+
+.main-visual {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    display: block;
+    // width: 0;
+    font-size: 120px;
+    transform: scale(0);
+    opacity: 0;
+  }
+
+}

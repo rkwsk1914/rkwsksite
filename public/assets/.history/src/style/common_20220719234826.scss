@@ -1,0 +1,13 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+// @import "custom";
+
+section {
+  height: 500vh;
+}
+
+section:nth-child(2n) {
+  background-color: red;
+}

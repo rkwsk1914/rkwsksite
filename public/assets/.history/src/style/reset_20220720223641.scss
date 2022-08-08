@@ -1,0 +1,10 @@
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  @extend .inheritance-font-base;
+}
+
+section {
+  max-width: 950px;
+  margin: 0 auto;
+}

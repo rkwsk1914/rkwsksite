@@ -1,0 +1,39 @@
+
+/*
+  筆記体
+  @extend .inheritance-font-cursive;
+*/
+@font-face {
+  font-family: LeagueScript-Regular;
+  src: url('./fonts/LeagueScript-Regular.ttf') format("truetype");
+}
+
+.inheritance-font-cursive {
+  font-family: LeagueScript-Regular, sans-serif;
+}
+
+/*
+  ゴシック
+  @extend .inheritance-font-gothic;
+*/
+@font-face {
+  font-family: Jost-VariableFont;
+  src: url('./fonts/Jost-VariableFont_wght.ttf') format("truetype");
+}
+
+.inheritance-font-gothic {
+  font-family: Jost-VariableFont, sans-serif;
+}
+
+/*
+  明朝体
+  @extend .inheritance-font-mincho;
+*/
+@font-face {
+  font-family: PTSerif-Regula;
+  src: url('./fonts/IMFellFrenchCanon-Regular.ttf') format("truetype");
+}
+
+.inheritance-font-mincho {
+  font-family: PTSerif-Regula, sans-serif;
+}

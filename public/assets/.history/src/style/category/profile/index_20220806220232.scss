@@ -1,0 +1,20 @@
+/* ---------------------------------------------------------------------------------
+  original import
+--------------------------------------------------------------------------------- */
+@import "./../../compornent/font-data.scss";
+@import "./../../compornent/reset.scss";
+@import "./../../compornent/responsive.scss";
+
+.site-container {
+  &__box {
+    $bg-color-work: #6e6259;
+    background-color: $bg-color-work!important;
+    color: #fff;
+
+    &__title {
+      &::before {
+        color: $bg-color-work!important;
+      }
+    }
+  }
+}

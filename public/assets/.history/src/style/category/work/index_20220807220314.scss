@@ -1,0 +1,72 @@
+/* ---------------------------------------------------------------------------------
+  original import
+--------------------------------------------------------------------------------- */
+@import "./../../compornent/font-data.scss";
+@import "./../../compornent/reset.scss";
+@import "./../../compornent/responsive.scss";
+
+.work-card-list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media(max-width: 576px) {
+    padding: 0;
+  }
+
+  li {
+    display: block;
+    margin: 20px 0 0 0;
+  }
+
+  .work-card {
+    display: block;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 300px;
+    background-color: #fff;
+    box-shadow: 10px 10px 10px 0px rgb(0 0 0 / 50%);
+    margin: 0 0 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &,
+    &:active,
+    &:focus,
+    &:visited
+    &:hover {
+      text-decoration: none;
+      color: #333!important;
+      font-weight: bold;
+    }
+
+    @media(max-width: 576px) {
+      width: responsivePx(160);
+      margin: 0 auto responsivePx(20);
+      height: responsivePx(200);
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &__head {
+      display: block;
+      margin: 0 auto;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &__body {
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  }
+}

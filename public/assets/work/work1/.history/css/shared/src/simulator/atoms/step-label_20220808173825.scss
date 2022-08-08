@@ -1,0 +1,61 @@
+@import "./../common/responsive.scss";
+.simulator-modal__step-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  box-sizing: border-box;
+  background-image: url(/assets/work/work1/img/shared/bg-step-label.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media(max-width: 576px) {
+    width: responsivePx(70);
+    height: responsivePx(70);
+  }
+
+  &__content {
+    @extend .inheritance-font-robot;
+    text-align: center;
+
+    &__step-text {
+      display: block;
+      font-weight: bold;
+      color: #fff;
+      font-size: 15px;
+      line-height: 1;
+
+      @media(max-width: 576px) {
+        font-size: responsivePx(15);
+      }
+    }
+
+    &__text {
+      display: block;
+      font-weight: bold;
+      color: #fff;
+      font-size: 20px;
+      line-height: 1;
+      margin-top: 2px;
+
+      @media(max-width: 576px) {
+        font-size: responsivePx(20);
+        margin-top: responsivePx(2);
+      }
+
+      strong {
+        font-size: 30px;
+        color: #fff;
+        margin: -2px 0 0px 0;
+        display: inline-block;
+
+        @media(max-width: 576px) {
+          margin: responsivePx(-2) 0 0 0;
+          font-size: responsivePx(30);
+        }
+      }
+    }
+  }
+}

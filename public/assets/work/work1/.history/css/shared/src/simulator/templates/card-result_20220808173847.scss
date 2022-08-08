@@ -1,0 +1,292 @@
+.simulator-modal__card {
+  &#Result {
+    .simulator-modal__card {
+      &__head {
+        background-color: #FFEBEF;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 32px 35px 20px;
+
+        @media(max-width: 576px) {
+          padding: responsivePx(32) responsivePx(15) responsivePx(14);
+        }
+
+        .parallelogram-title {
+          width: 245px;
+          height: 39px;
+          line-height: 33px;
+          margin: 0 auto;
+
+          @media(max-width: 576px) {
+            width: responsivePx(245);
+            height: responsivePx(39);
+            line-height: responsivePx(33);
+          }
+        }
+
+        &__sub-text {
+          font-weight: bold;
+          font-size: 12px;
+          margin: 10px 0 15px 0;
+          text-align: center;
+
+          @media(max-width: 576px) {
+            font-size: responsivePx(12);
+            margin: responsivePx(10) 0 responsivePx(11) 0;
+          }
+
+          &__item {
+            &__dot {
+              margin: 0 0 0 0;
+            }
+          }
+
+          a {
+            &,
+            &:hover,
+            &:active,
+            &:focus,
+            &:visited {
+              color: #4C7EE4!important;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .simulator-note {
+          margin: 15px auto 0;
+          max-width: 500px;
+
+          @media(max-width: 576px) {
+            margin: responsivePx(13) 0 0 0;
+          }
+
+          .simulator-note__item {
+            @media(min-width: 576px) {
+              font-size: 11.5px;
+              line-height: 18px;
+            }
+          }
+        }
+
+        &__claim-area {
+          margin: 14px -35px -20px;
+          padding: 10px;
+          background-size: 20px 20px;
+          background-image: url(/assets/work/work1/img/shared/bg-cailm-area.png);
+
+          @media(max-width: 576px) {
+            background-size: responsivePx(20) responsivePx(20);
+            margin: responsivePx(15) responsivePx(-15) responsivePx(-14);
+            padding: responsivePx(10);
+          }
+
+          .simulator-button--banner {
+            margin: -25px auto 0;
+
+            @media(max-width: 576px) {
+              margin: responsivePx(-20) auto 0;
+            }
+          }
+        }
+      }
+
+      &__body {
+        padding: 26px 35px 28px;
+        border-top: none!important;
+
+        @media(max-width: 576px) {
+          padding: responsivePx(16) responsivePx(14) responsivePx(28);
+        }
+
+        h3 {
+          text-align: center;
+          font-weight: bold;
+          font-size: 20px;
+          display: block;
+          margin: 30px 0 30px;
+
+          @media(max-width: 576px) {
+            margin: responsivePx(30) 0 responsivePx(30);
+          }
+
+          small {
+            font-size: 14px;
+            font-weight: normal;
+
+            @media(max-width: 576px) {
+              font-size: responsivePx(14);
+            }
+          }
+        }
+
+        .simulator-modal__accrodion {
+          &__content {
+            overflow: hidden;
+            transition: height 0.3s ease;
+            position: relative;
+
+            &.open {
+              height: auto;
+
+              // @media(max-width: 576px) {
+              //  height: responsivePx(2040);
+              // }
+            }
+
+            &.close {
+              $accordion-default-height: 92px;
+              $accordion-default-height-sp: responsivePx(90);
+              height: $accordion-default-height;
+
+              @media(max-width: 576px) {
+                height: $accordion-default-height-sp;
+              }
+
+              &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: $accordion-default-height;
+                top: 0;
+                position: absolute;
+                background: rgb(255,255,255);
+                background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+
+                @media(max-width: 576px) {
+                  height: $accordion-default-height-sp;
+                }
+              }
+            }
+          }
+
+          &__button {
+            margin: 5px auto 0;
+
+            @media(max-width: 576px) {
+              margin: 0 auto 0;
+              width: 100%;
+              padding: 0 responsivePx(88);
+            }
+          }
+        }
+
+        &__detail-section {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          &+.simulator-modal__card__body__detail-section {
+            margin: 20px 0 0 0;
+
+            @media(max-width: 576px) {
+              margin: responsivePx(20) 0 0 0;
+            }
+          }
+
+          h4 {
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            display: block;
+            text-align: left;
+            margin: 0 0 11px 0;
+
+            @media(max-width: 576px) {
+              font-size: responsivePx(16);
+              margin: 0 0 responsivePx(11) 0;
+            }
+          }
+
+          h5 {
+            margin: 5px 0;
+
+            @media(max-width: 576px) {
+              margin: responsivePx(8) 0 responsivePx(5);
+              font-size: responsivePx(10);
+            }
+          }
+
+          &__check-box,
+          &__radio {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: dashed 1px #ccc;
+            border-bottom: dashed 1px #ccc;
+            padding: 10px 0;
+            width: 100%;
+
+            @media(max-width: 576px) {
+              padding: responsivePx(10) 0;
+            }
+
+            &.column-2 {
+              width: calc(50% - 10px);
+
+              @media(max-width: 576px) {
+                width: 100%;
+              }
+
+              &:nth-child(n + 3) {
+                @media(max-width: 576px) {
+                  border-top: none;
+                }
+              }
+
+              &:nth-child(n + 4) {
+                border-top: none;
+              }
+            }
+
+            p {
+              font-size: 10px;
+              font-weight: bold;
+              margin: 0;
+              text-align: right;
+              min-width: 100px;
+
+              @media(max-width: 576px) {
+                font-size: responsivePx(10);
+                min-width: responsivePx(100);
+              }
+
+              span {
+                color: #e6323c;
+              }
+            }
+
+            &.simulator-note {
+              &__item {
+                margin-top: 1px;
+
+                @media(max-width: 576px) {
+                  margin-top: responsivePx(1);
+                }
+              }
+            }
+
+            &+.simulator-note {
+              margin: 20px 0 0 0;
+
+              @media(max-width: 576px) {
+                margin: responsivePx(20) 0 0 0;
+              }
+            }
+          }
+        }
+
+        .simulator-button--blue,
+        .simulator-button--white {
+          margin: 13px auto 0;
+
+          @media(max-width: 576px) {
+            margin: responsivePx(15) auto 0;
+            width: responsivePx(150);
+            min-width: responsivePx(150);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,10 +1,30 @@
-<header></header>
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-    <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="/">
-            <img src={{ asset('assets/common/icon/main.png', $is_production) }} width="70" height="70"
-                class="d-inline-block align-top" alt="logo">
-            <span class="align-middle">My Site</span>
-        </a>
-    </div>
-</nav>
+<header>
+    <button class="nav-menu-button">menu</button>
+    <nav class="nav-menu animate__animated js-animate-fade">
+        <ul class="nav-menu__content">
+            <li class="nav-menu__content__item">
+                <a class="nav-menu__content__item__link-logo" href="/">
+                    <span class="nav-menu__logo">
+                        <strong>Ryo Kawasaki</strong>
+                        <small>portfolio site</small>
+                    </span>
+                </a>
+            </li>
+            <li class="nav-menu__content__item">
+                <a class="nav-menu__content__item__link" href="/">Top</a>
+            </li>
+            <li class="nav-menu__content__item">
+                <a class="nav-menu__content__item__link" data-href="/work" href="/work">Works</a>
+            </li>
+            <li class="nav-menu__content__item">
+                <a class="nav-menu__content__item__link" data-href="/profile" href="/profile">Profile</a>
+            </li>
+        </ul>
+    </nav>
+    <button class="nav-top animate__animated js-animate-fade">
+        <span>
+            <i class="fa-solid fa-arrow-up"></i><br>
+            TOP
+        </span>
+    </button>
+</header>

@@ -1,0 +1,27 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+// @import "custom";
+@import "locomotive-scroll/dist/locomotive-scroll.min.css";
+
+body {
+  background-color: #ccc;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+section {
+  background-color: #fff;
+  height: 100vh;
+}
+
+section:nth-child(2n) {
+  background-color: red;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

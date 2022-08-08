@@ -1,0 +1,41 @@
+@media(max-width: 576px) {
+  .u {
+    &-sp {
+      &-d {
+        &-n {
+          display: none !important;
+        }
+      }
+
+      @for $i from 0 through 1000 {
+        &-mt-#{$i} {
+          margin-top: $i + px !important;
+        }
+      }
+
+      @for $i from 0 through 1000 {
+        &-mb-#{$i} {
+          margin-bottom: $i + px !important;
+        }
+      }
+
+      @for $i from 0 through 300 {
+        &-fs-#{$i} {
+          font-size: responsivePx($i) !important;
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 576px) {
+  .u {
+    &-pc {
+      &-d {
+        &-n {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

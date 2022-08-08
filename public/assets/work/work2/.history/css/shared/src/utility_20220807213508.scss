@@ -1,0 +1,546 @@
+@charset "utf-8";
+/* ----------------------------------------------------------------
+  レスポンシブ対応
+  画面幅 750pxをベースに調整
+----------------------------------------------------------------- */
+@function responsivePx($px) {
+  $value: $px / 750 * 100vw;
+  @return $value;
+}
+
+.w100 {
+  width: 100%;
+}
+
+/* ----------------------------------------------------------------
+  調整クラス
+----------------------------------------------------------------- */
+/*
+  各種スタイル定義
+*/
+
+/*
+  flex option
+*/
+@mixin definition-flex-justify-start {
+  justify-content: flex-start !important;
+}
+@mixin definition-flex-justify-center {
+  justify-content: center !important;
+}
+@mixin definition-flex-justify-end {
+  justify-content: flex-end !important;
+}
+@mixin definition-flex-justify-between {
+  justify-content: space-between !important;
+}
+@mixin definition-flex-justify-around {
+  justify-content: space-around !important;
+}
+
+@mixin definition-flex-align-start {
+  align-items: flex-start !important;
+}
+@mixin definition-flex-align-center {
+  align-items: center !important;
+}
+@mixin definition-flex-align-end {
+  align-items: flex-end !important;
+}
+
+/*
+  flex main option
+*/
+@mixin definition-flex-justify {
+  &--justify {
+    &-start {
+      display: flex!important;
+      @include definition-flex-justify-start;
+
+      &--algin {
+        &-start {
+          display: flex!important;
+          @include definition-flex-justify-start;
+          @include definition-flex-align-start;
+        }
+        &-center {
+          display: flex!important;
+          @include definition-flex-justify-start;
+          @include definition-flex-align-center;
+        }
+        &-end {
+          display: flex!important;
+          @include definition-flex-justify-start;
+          @include definition-flex-align-end;
+        }
+      }
+    }
+    &-center {
+      display: flex!important;
+      @include definition-flex-justify-center;
+
+      &--algin {
+        &-start {
+          display: flex!important;
+          @include definition-flex-justify-center;
+          @include definition-flex-align-start;
+        }
+        &-center {
+          display: flex!important;
+          @include definition-flex-justify-center;
+          @include definition-flex-align-center;
+        }
+        &-end {
+          display: flex!important;
+          @include definition-flex-justify-center;
+          @include definition-flex-align-end;
+        }
+      }
+    }
+    &-end {
+      display: flex!important;
+      @include definition-flex-justify-end;
+
+      &--algin {
+        &-start {
+          display: flex!important;
+          @include definition-flex-justify-end;
+          @include definition-flex-align-start;
+        }
+        &-center {
+          display: flex!important;
+          @include definition-flex-justify-end;
+          @include definition-flex-align-center;
+        }
+        &-end {
+          display: flex!important;
+          @include definition-flex-justify-end;
+          @include definition-flex-align-end;
+        }
+      }
+    }
+    &-between {
+      display: flex!important;
+      @include definition-flex-justify-between;
+
+      &--algin {
+        &-start {
+          display: flex!important;
+          @include definition-flex-justify-between;
+          @include definition-flex-align-start;
+        }
+        &-center {
+          display: flex!important;
+          @include definition-flex-justify-between;
+          @include definition-flex-align-center;
+        }
+        &-end {
+          display: flex!important;
+          @include definition-flex-justify-between;
+          @include definition-flex-align-end;
+        }
+      }
+    }
+    &-around {
+      display: flex!important;
+      @include definition-flex-justify-around;
+
+      &--algin {
+        &-start {
+          display: flex!important;
+          @include definition-flex-justify-around;
+          @include definition-flex-align-start;
+        }
+        &-center {
+          display: flex!important;
+          @include definition-flex-justify-around;
+          @include definition-flex-align-center;
+        }
+        &-end {
+          display: flex!important;
+          @include definition-flex-justify-around;
+          @include definition-flex-align-end;
+        }
+      }
+    }
+  }
+}
+
+@mixin definition-flex-align {
+  &--algin {
+    &-start {
+      display: flex!important;
+      @include definition-flex-align-start;
+
+      &--justify {
+        &-start {
+          display: flex!important;
+          @include definition-flex-align-start;
+          @include definition-flex-justify-start;
+        }
+        &-center {
+          display: flex!important;
+          @include definition-flex-align-start;
+          @include definition-flex-justify-center;
+        }
+        &-end {
+          display: flex!important;
+          @include definition-flex-align-start;
+          @include definition-flex-justify-end;
+        }
+        &-between {
+          display: flex!important;
+          @include definition-flex-align-start;
+          @include definition-flex-justify-between;
+        }
+        &-around {
+          display: flex!important;
+          @include definition-flex-align-start;
+          @include definition-flex-justify-around;
+        }
+      }
+    }
+    &-center {
+      display: flex!important;
+      @include definition-flex-align-center;
+
+      &--justify {
+        &-start {
+          display: flex!important;
+          @include definition-flex-align-center;
+          @include definition-flex-justify-start;
+        }
+        &-center {
+          display: flex!important;
+          @include definition-flex-align-center;
+          @include definition-flex-justify-center;
+        }
+        &-end {
+          display: flex!important;
+          @include definition-flex-align-center;
+          @include definition-flex-justify-end;
+        }
+        &-between {
+          display: flex!important;
+          @include definition-flex-align-center;
+          @include definition-flex-justify-between;
+        }
+        &-around {
+          display: flex!important;
+          @include definition-flex-align-center;
+          @include definition-flex-justify-around;
+        }
+      }
+    }
+    &-end {
+      display: flex!important;
+      @include definition-flex-align-end;
+
+      &--justify {
+        &-start {
+          display: flex!important;
+          @include definition-flex-align-end;
+          @include definition-flex-justify-start;
+        }
+        &-center {
+          display: flex!important;
+          @include definition-flex-align-end;
+          @include definition-flex-justify-center;
+        }
+        &-end {
+          display: flex!important;
+          @include definition-flex-align-end;
+          @include definition-flex-justify-end;
+        }
+        &-between {
+          display: flex!important;
+          @include definition-flex-align-end;
+          @include definition-flex-justify-between;
+        }
+        &-around {
+          display: flex!important;
+          @include definition-flex-align-end;
+          @include definition-flex-justify-around;
+        }
+      }
+    }
+  }
+}
+
+/*
+  display
+*/
+@mixin definition-display {
+  &-d {
+    &-n {
+      display: none !important;
+    }
+    &-flex {
+      display: flex !important;
+      @include definition-flex-align;
+      @include definition-flex-justify;
+    }
+  }
+}
+
+/*
+  margin
+*/
+@mixin definition-margin {
+  &-m {
+    @for $i from 0 through 500 {
+      &t-#{$i} {
+        margin-top: $i + px !important;
+      }
+      &b-#{$i} {
+        margin-bottom: $i + px !important;
+      }
+      &l-#{$i} {
+        margin-left: $i + px !important;
+      }
+      &r-#{$i} {
+        margin-right: $i + px !important;
+      }
+    }
+  }
+}
+
+@mixin definition-responsive-margin {
+  &-m {
+    @for $i from 0 through 500 {
+      &t-#{$i} {
+        margin-top: responsivePx($i) !important;
+      }
+      &b-#{$i} {
+        margin-bottom: responsivePx($i) !important;
+      }
+      &l-#{$i} {
+        margin-left: responsivePx($i) !important;
+      }
+      &r-#{$i} {
+        margin-right: responsivePx($i) !important;
+      }
+    }
+  }
+}
+
+/*
+  padding
+*/
+@mixin definition-padding {
+  &-p {
+    @for $i from 0 through 500 {
+      &t-#{$i} {
+        padding-top: $i + px !important;
+      }
+      &b-#{$i} {
+        padding-bottom: $i + px !important;
+      }
+      &l-#{$i} {
+        padding-left: $i + px !important;
+      }
+      &r-#{$i} {
+        padding-right: $i + px !important;
+      }
+    }
+  }
+}
+
+@mixin definition-responsive-padding {
+  &-p {
+    @for $i from 0 through 500 {
+      &t-#{$i} {
+        padding-top: responsivePx($i) !important;
+      }
+      &b-#{$i} {
+        padding-bottom: responsivePx($i) !important;
+      }
+      &l-#{$i} {
+        padding-left: responsivePx($i) !important;
+      }
+      &r-#{$i} {
+        padding-right: responsivePx($i) !important;
+      }
+    }
+  }
+}
+
+/*
+  font style
+*/
+@mixin definition-font {
+  &-f {
+    &c {
+      &-orange {
+        color: #f36700 !important;
+      }
+      &-blue {
+        color: #0070e1 !important;
+      }
+    }
+    &w {
+      &-bold {
+        font-weight: bold !important;
+      }
+      &-normal {
+        font-weight: normal !important;
+      }
+    }
+  }
+}
+
+@mixin definition-font-size {
+  &-f {
+    @for $i from 0 through 100 {
+      &s-#{$i} {
+        font-size: $i + px !important;
+      }
+    }
+  }
+}
+
+@mixin definition-font-responsive-size {
+  &-f {
+    @for $i from 0 through 100 {
+      &s-#{$i} {
+        font-size: responsivePx($i) !important;
+      }
+    }
+  }
+}
+
+/*
+  width
+*/
+@mixin definition-width {
+  &-w {
+    @for $i from 0 through 500 {
+      &-#{$i} {
+        width: $i + px !important;
+      }
+      &-min-#{$i} {
+        min-width: $i + px !important;
+      }
+      &-max-#{$i} {
+        max-width: $i + px !important;
+      }
+    }
+  }
+}
+
+/*
+  height
+*/
+@mixin definition-height {
+  &-h {
+    @for $i from 0 through 300 {
+      &-#{$i} {
+        height: $i + px !important;
+      }
+      &-min-#{$i} {
+        min-height: $i + px !important;
+      }
+      &-max-#{$i} {
+        max-height: $i + px !important;
+      }
+    }
+  }
+}
+
+/*
+  responsive width
+*/
+@mixin definition-responsive-width {
+  &-w {
+    @for $i from 0 through 500 {
+      &-#{$i} {
+        width: responsivePx($i) !important;
+      }
+      &-min-#{$i} {
+        min-width: responsivePx($i) !important;
+      }
+      &-max-#{$i} {
+        max-width: responsivePx($i) !important;
+      }
+    }
+  }
+}
+
+/*
+  responsive height
+*/
+@mixin definition-responsive-height {
+  &-h {
+    @for $i from 0 through 300 {
+      &-#{$i} {
+        height: responsivePx($i) !important;
+      }
+      &-min-#{$i} {
+        min-height: responsivePx($i) !important;
+      }
+      &-max-#{$i} {
+        max-height: responsivePx($i) !important;
+      }
+    }
+  }
+}
+
+/*
+  text-align
+*/
+@mixin definition-text-align {
+  &-ta {
+    &-right { text-align: right!important; }
+    &-center { text-align: center!important; }
+    &-left { text-align: left!important; }
+  }
+}
+
+/*
+  スタイル定義
+*/
+@mixin definition-style {
+  @include definition-display;
+  @include definition-font;
+  @include definition-text-align;
+
+  @include definition-font-size;
+  @include definition-margin;
+  @include definition-padding;
+  @include definition-width;
+  @include definition-height;
+}
+
+@mixin definition-responsive-style {
+  @include definition-display;
+  @include definition-font;
+  @include definition-text-align;
+
+  @include definition-font-responsive-size;
+  @include definition-responsive-margin;
+  @include definition-responsive-padding;
+  @include definition-responsive-width;
+  @include definition-responsive-height;
+}
+
+/*
+  メディアクエリ
+*/
+.u {
+  @include definition-style;
+  @media(max-width: 576px) {
+    @include definition-responsive-style;
+  }
+
+  @media (min-width: 900px) {
+    &-p {
+      @include definition-style;
+    }
+  }
+
+  @media (max-width: 899.9px) {
+    &-s {
+      @include definition-responsive-style;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+
+/*
+  筆記体
+  @extend .inheritance-font-cursive;
+*/
+@font-face {
+  font-family: LeagueScript-Regular;
+  src: url('/common/css/fonts/LeagueScript-Regular.ttf') format("truetype");
+}
+.inheritance-font-cursive {
+  font-family: LeagueScript-Regular, sans-serif;
+}
+
+/*
+  ゴシック
+  @extend .inheritance-font-gothic;
+*/
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('/common/css/fonts/Poppins-Regular.ttf') format("truetype");
+}
+.inheritance-font-gothic {
+  font-family: Poppins-Regular, sans-serif;
+}
+
+/*
+  明朝体
+  @extend .inheritance-font-mincho;
+*/
+@font-face {
+  font-family: PTSerif-Regula;
+  src: url('/common/css/fonts/Rosarivo-Regular.ttf') format("truetype");
+}
+.inheritance-font-mincho {
+  font-family: PTSerif-Regula, sans-serif;
+}
+
+/*
+  ベース
+  @extend .inheritance-font-base;
+*/
+@font-face {
+  font-family: NotoSansJP-Regular;
+  src: url('/common/css/fonts/NotoSansJP-Regular.otf') format("opentype");
+}
+.inheritance-font-base {
+  font-family: NotoSansJP-Regular, sans-serif;
+}

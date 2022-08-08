@@ -1,0 +1,11 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+// @import "custom";
+@import "locomotive-scroll/dist/locomotive-scroll.min.css";
+
+/* ---------------------------------------------------------------------------------
+  original import
+--------------------------------------------------------------------------------- */
+@import ".index.scss";

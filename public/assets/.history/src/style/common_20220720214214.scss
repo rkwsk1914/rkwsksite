@@ -1,0 +1,94 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+// @import "custom";
+@import "locomotive-scroll/dist/locomotive-scroll.min.css";
+
+/* ---------------------------------------------------------------------------------
+  original import
+--------------------------------------------------------------------------------- */
+@import "./font-data.scss";
+@import "./reset.scss";
+
+/* ---------------------------------------------------------------------------------
+  main
+--------------------------------------------------------------------------------- */
+.main-visual {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 0 0;
+  position: relative;
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    @extend .inheritance-font-mincho;
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+    }
+
+    small {
+      @extend .inheritance-font-cursive;
+    }
+  }
+
+}
+
+.works-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    display: block;
+    margin: auto 10px;
+
+    &__card {
+      &__head {
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+      }
+
+      &__body {}
+    }
+  }
+}
+
+.profile-section {
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+
+  &__image-box {
+    width: 66%;
+  }
+
+  &__link-box {
+    width: 33%;
+
+    &__button {
+
+    }
+  }
+}

@@ -1,0 +1,105 @@
+/* ---------------------------------------------------------------------------------
+  original import
+--------------------------------------------------------------------------------- */
+@import "./../compornent/font-data.scss";
+@import "./../compornent/reset.scss";
+@import "./../compornent/responsive.scss";
+@import "./../compornent/animate/animation.scss";
+@import "./../compornent/animate/init-animate-css.scss";
+
+/* ---------------------------------------------------------------------------------
+  main
+--------------------------------------------------------------------------------- */
+.site-container {
+
+  .nav-menu {
+    background-color: rgba($color: #ccc0a7, $alpha: 0.8);
+    position: fixed;
+    padding: 0 50px;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .3);
+
+    @media(max-width: 576px) {
+      display: none;
+    }
+
+    ul {
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      li {
+        list-style: none;
+
+        a {
+          &,
+          &:hover,
+          &:visited,
+          &:active,
+          &:focus {
+            display: block;
+            color: #000;
+            font-size: 20px;
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 100px 100px 150px;
+    background-color: #333;
+    color: #fff;
+    margin: 0 0 0 0;
+    position: relative;
+
+    @media(max-width: 576px) {
+      padding: responsivePx(50) responsivePx(15);
+    }
+
+    h2 {
+      @extend .inheritance-font-mincho;
+      display: block;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+      width: max-content;
+
+      @media(max-width: 576px) {
+        margin: 0 auto  ;
+      }
+
+      strong {
+        display: block;
+        font-size: 35px;
+
+        @media(max-width: 576px) {
+          font-size: responsivePx(35);
+        }
+      }
+
+      small {
+        @extend .inheritance-font-cursive;
+        width: 100%;
+        display: block;
+        border-top: 1px solid #fff;
+        font-size: 15px;
+        padding: 10px 0 0;
+        margin: -10px 0 0 0;
+
+        @media(max-width: 576px) {
+          font-size: responsivePx(15);
+          padding: responsivePx(10) 0 0;
+          margin: responsivePx(-10) 0 0 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@media(max-width: 576px) {
+  .u {
+    &-sp {
+      &-d {
+        &-n {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 576px) {
+  .u {
+    &-pc {
+      &-d {
+        &-n {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

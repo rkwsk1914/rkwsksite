@@ -1,0 +1,32 @@
+@import "./responsive.scss";
+html.body {}
+
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color: #333;
+  @extend .inheritance-font-base;
+}
+
+section {
+  width: 100%;
+  padding: 30px 0;
+  position: relative;
+
+  .container {
+    max-width: 950px;
+    margin: 0 auto;
+
+    @media(max-width: 576px) {
+      padding: responsivePx(15) 0;
+    }
+  }
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0%;
+}
+
+p+p {
+  margin: 15px 0 0 0;
+}

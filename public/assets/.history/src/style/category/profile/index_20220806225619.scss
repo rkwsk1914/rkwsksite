@@ -1,0 +1,60 @@
+/* ---------------------------------------------------------------------------------
+  original import
+--------------------------------------------------------------------------------- */
+@import "./../../compornent/font-data.scss";
+@import "./../../compornent/reset.scss";
+@import "./../../compornent/responsive.scss";
+
+.site-container {
+  &__box {
+    $bg-color-work: #6e6259;
+    background-color: $bg-color-work!important;
+    color: #fff;
+
+    &__title {
+      &::before {
+        color: $bg-color-work!important;
+      }
+    }
+  }
+}
+
+.container {
+  h2 {
+    margin: 30px 0 0 0;
+  }
+}
+
+table {
+  font-size: 20px;
+  width: 80%;
+  margin: 0 auto;
+
+  .background-table-col {
+    col:nth-child(1) {
+      width: 20%;
+    }
+  }
+
+  .skill-table-col {
+    col:nth-child(1) {
+      width: 20%;
+    }
+  }
+
+  thead {
+  }
+
+  tbody {
+  }
+
+  tr {
+    td,th {
+      padding: 20px;
+    }
+
+    th {
+      text-align: left;
+    }
+  }
+}

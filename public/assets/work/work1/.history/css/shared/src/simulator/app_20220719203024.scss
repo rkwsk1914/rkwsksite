@@ -1,0 +1,215 @@
+@import "./common/responsive.scss";
+
+@import "./atoms/parallelogram-title.scss";
+@import "./atoms/accordion-button.scss";
+@import "./atoms/addtional-bubble.scss";
+@import "./atoms/addtional-bubble-box.scss";
+@import "./atoms/button-blue.scss";
+@import "./atoms/button-white.scss";
+@import "./atoms/button-banner.scss";
+@import "./atoms/check-box.scss";
+@import "./atoms/modal-close-button.scss";
+@import "./atoms/note-item.scss";
+@import "./atoms/radio.scss";
+@import "./atoms/step-label.scss";
+@import "./atoms/simulator-start-button.scss";
+
+@import "./molecules/note.scss";
+
+@import "./organisms/accordion.scss";
+@import "./organisms/additional-note.scss";
+@import "./organisms/value-of-money.scss";
+
+@import "./templates/card.scss";
+@import "./templates/card-result.scss";
+@import "./templates/card-how-to.scss";
+@import "./templates/under-result-box.scss";
+
+@import "./pages/simulator-modal.scss";
+
+/* ----------------------------------------------------------------
+  シュミレーター内の継承クラス
+----------------------------------------------------------------- */
+/*
+  @extend .inheritance-font-robot;
+*/
+.inheritance-font-robot {
+  font-family: Roboto, "ヒラギノ角ゴ Pro", Helvetica, Arial, "ヒラギノ角ゴ Pro",
+    "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "モリサワ 新ゴ R",
+    "Droid Sans", メイリオ, sans-serif;
+}
+
+/* ----------------------------------------------------------------
+  矢印アニメーション
+----------------------------------------------------------------- */
+$arrow-pc-width: 46px;
+@keyframes arrowAnimation {
+  0% {
+    width: 0;
+  }
+  33% {
+    width: calc($arrow-pc-width * 1 / 3);
+  }
+  66% {
+    width: calc($arrow-pc-width * 2 / 3);
+  }
+  100% {
+    width: calc($arrow-pc-width * 3 / 3);
+  }
+}
+
+$arrow-pc-height: 46px;
+@keyframes arrowAnimation {
+  0% {
+    height: 0;
+  }
+  33% {
+    height: calc($arrow-pc-height * 1 / 3);
+  }
+  66% {
+    height: calc($arrow-pc-height * 2 / 3);
+  }
+  100% {
+    height: calc($arrow-pc-height * 3 / 3);
+  }
+}
+
+/* ----------------------------------------------------------------
+  シュミレーター全体スタイル
+----------------------------------------------------------------- */
+.simulator__content {
+  font-family: "UDShinGoPr6N", "ヒラギノ角ゴ Pro", Helvetica, Arial,
+    "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "モリサワ 新ゴ R",
+    "Droid Sans", メイリオ, "sans-serif";
+
+  .simulator-start-button {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* ----------------------------------------------------------------
+  ページ静的箇所
+----------------------------------------------------------------- */
+.box-simulator_contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 0 0 30px;
+
+  @media(max-width: 1024px) {
+    margin: 0 0 0 10px;
+  }
+
+  @media(max-width: 576px) {
+    margin: responsivePx(46) 0 0 0;
+    display: block;
+  }
+
+  &__first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 0 30px 10px 0;
+
+    @media(max-width: 576px) {
+      margin: 0 0 0 0;
+      width: 100%;
+    }
+
+    &__main-title {
+      color: #000;
+      font-weight: bold;
+      line-height: 1.4;
+      font-size: 20px;
+      text-align: center;
+      margin: 0 20px;
+
+      @media(max-width: 576px) {
+        margin: 0 responsivePx(20);
+        font-size: responsivePx(28);
+      }
+    }
+
+    &__arrow-icon {
+      display: block;
+      margin: 0 0 0 0;
+      width: 17px;
+      height: $arrow-pc-height;
+      background-image: url(/assets/work/work1/img/p/img-arrow-bottom.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media(max-width: 576px) {
+        margin: 0 0 0 0;
+        width: responsivePx(17);
+        height: responsivePx(46);
+        background-image: url(/assets/work/work1/img/s/img-arrow-bottom.png);
+      }
+    }
+  }
+
+  &__second {
+    width: 445px;
+    margin: 0 0 0 -34px;
+
+    @media(max-width: 1200px) {
+      max-width: 445px;
+      margin: 0;
+      width: 100%;
+    }
+
+    @media(max-width: 576px) {
+      width: 100%;
+      margin: 0 0 0 0;
+    }
+
+    .parallelogram-title {
+      width: 242px;
+      line-height: 30px;
+      height: 38px;
+      font-size: 16px;
+      margin: 0 auto;
+
+      @media(max-width: 576px) {
+        margin: responsivePx(40) auto 0;
+        width: responsivePx(242);
+        line-height: responsivePx(30);
+        height: responsivePx(38);
+        font-size: responsivePx(16);
+      }
+    }
+
+    &__title {
+      font-weight: bold;
+      font-size: 30px;
+      text-align: center;
+      margin: 10px 0 15px;
+
+      @media(max-width: 576px) {
+        margin: responsivePx(10) 0 0 0;
+        font-size: responsivePx(40);
+        line-height: 1.2;
+      }
+    }
+
+    #simulator {
+      margin: 0 0 20px 0;
+
+      @media(max-width: 576px) {
+        margin: responsivePx(27) 0 responsivePx(34) 0;
+      }
+    }
+
+    .layout-bullet {
+      margin: 0 60px 0 50px;
+
+      @media(max-width: 576px) {
+        margin: 0 0 0 0;
+      }
+    }
+  }
+}

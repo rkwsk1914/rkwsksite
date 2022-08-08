@@ -1,0 +1,143 @@
+@import "./../common/responsive.scss";
+
+.simulator-modal-value {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  line-height: 1;
+
+  @media(max-width: 576px) {
+    justify-content: flex-start;
+  }
+
+  &__preText {
+    display: block;
+    font-size: 13px;
+    min-width: 56px;
+    margin: 0 3px 0 0;
+    text-align: center;
+
+    @media(max-width: 576px) {
+      font-size: responsivePx(13);
+      min-width: responsivePx(56);
+      margin: 0 responsivePx(-2) 0 responsivePx(25);
+    }
+
+    &__mainText {
+      display: block;
+      font-size: 20px;
+      width: 100%;
+
+      @media(max-width: 576px) {
+        font-size: responsivePx(20);
+      }
+    }
+
+    &__smallText {
+      display: block;
+      font-size: 10px;
+      width: 50px;
+      height: 27px;
+      line-height: 20px;
+      position: relative;
+
+      background-image: url(/assets/work/work1/img/shared/bg-text-roughly.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      margin: 0px 0px 0px 4px;
+
+      @media(max-width: 576px) {
+        width: responsivePx(50);
+        height: responsivePx(27);
+        line-height: responsivePx(20);
+        margin: 0 0 0 responsivePx(4);
+      }
+    }
+
+    &__smallTextImage {
+      max-width: 56px;
+
+      @media(max-width: 576px) {
+        max-width: responsivePx(56);
+      }
+    }
+  }
+
+  &__amountText {
+    color: #FC0033;
+    font-size: 62px;
+    min-width: 160px;
+    text-align: center;
+    margin: -6px 4px -4px 0 ;
+    @extend .inheritance-font-robot;
+
+    @media(max-width: 576px) {
+      font-size: responsivePx(58);
+      min-width: responsivePx(160);
+      margin: 0 responsivePx(4) 0 0;
+    }
+
+    &.default {
+      color: #333;
+      letter-spacing: 5px;
+      font-weight: normal;
+      font-size: 30px;
+      min-width: 157px;
+      @extend .inheritance-font-robot;
+
+      @media(max-width: 576px) {
+        font-size: responsivePx(30);
+        min-width: responsivePx(157);
+        letter-spacing: responsivePx(5);
+      }
+    }
+  }
+
+  &__unit {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 40px;
+    font-weight: bold;
+    margin: 0 0 0 0;
+
+    @media(max-width: 576px) {
+      max-width: responsivePx(40);
+      margin: responsivePx(5) 0 0 responsivePx(-2);
+    }
+
+    &__yen {
+      font-size: 22px;
+      width: 100%;
+
+      @media(max-width: 576px) {
+        font-size: responsivePx(22);
+      }
+    }
+
+    &__month {
+      margin: 5px 0 0 0;
+      font-size: 10px;
+
+      @media(max-width: 576px) {
+        margin: responsivePx(5) 0 0 0;
+        font-size: responsivePx(10);
+      }
+    }
+  }
+
+  &__endText {
+    font-size: 21px;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0 0 0;
+
+    @media(max-width: 576px) {
+      font-size: responsivePx(21);
+      margin: responsivePx(3) 0 0 0;
+    }
+  }
+}
