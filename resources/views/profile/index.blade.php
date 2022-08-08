@@ -32,7 +32,7 @@ Profile
 
 <section id="first-view" class="first-view">
   <div class="first-view__left animate__animated js-animate-fade">
-    <img src={{ asset('assets/top/img/shared/pic-me.jpg', $is_production) }} alt="">
+    <img src={{ asset('assets/top/img/shared/pic-me.webp', $is_production) }} alt="" width="600" height="800">
   </div>
   <div class="first-view__right animate__animated js-animate-fade">
     <h3>川﨑 亮 <small>Kawasaki Ryo</small></h3>

@@ -68,7 +68,7 @@
                     my portfolio site
                 </p>
                 <div class="sub-visual__image">
-                    <img src={{ asset('assets/top/img/shared/sub-visual.jpg', $is_production) }} alt="">
+                    <img src={{ asset('assets/top/img/shared/sub-visual.webp', $is_production) }} alt="" width="1195" height="379">
                 </div>
                 <ul class="sub-visual__my-skils-icons animate__animated js-animate-fade">
                     <li><i class="fa-solid fa-code"></i></li>
@@ -121,7 +121,7 @@
                 </h2>
                 <section class="container profile-section" data-scroll data-scroll-repeat data-scroll-call="profile">
                     <div class="profile-section__image-box animate__animated js-animate-fade">
-                        <img src={{ asset('assets/top/img/shared/pic-me.jpg', $is_production) }} alt="">
+                        <img src={{ asset('assets/top/img/shared/pic-me.webp', $is_production) }} alt="" width="600" height="800">
                     </div>
                     <div class="profile-section__link-box animate__animated js-animate-fade ">
                         <a class="profile-section__link-box__button" href="/profile">Detail</a>
