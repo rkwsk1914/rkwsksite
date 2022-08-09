@@ -13,15 +13,15 @@ import '@fortawesome/fontawesome-free/js/regular'
 --------------------------------------------------------------------------------- */
 import './../style/common/index.scss'
 import 'animate.css'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+// import 'slick-carousel/slick/slick.css'
+// import 'slick-carousel/slick/slick-theme.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 /* ---------------------------------------------------------------------------------
   コンポーネント
 --------------------------------------------------------------------------------- */
-import { awatiFunction } from './compornent/AwatiFunction'
-import { ControllerNavMenu } from './compornent/ControllerNavMenu'
+// import { awatiFunction } from './compornent/AwatiFunction'
+// import { ControllerNavMenu } from './compornent/ControllerNavMenu'
 import { ContollerAnimateCss } from './compornent/ContollerAnimateCss'
 
 import { MainPC } from './p/index'

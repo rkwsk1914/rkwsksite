@@ -9,7 +9,7 @@ Profile
 @endslot
 
 @slot('orign_stylesheet')
-<link rel="stylesheet" href={{ asset('assets/category/profile/css/shared/substyle.min.css', $is_production) }}>
+<link rel=”preload” as="style" href={{ asset('assets/category/profile/css/shared/substyle.min.css', $is_production) }}>
 @endslot
 
 @slot('page_title')

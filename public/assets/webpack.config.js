@@ -4,6 +4,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const { ProvidePlugin } = require('webpack')
+const CompressionPlugin = require("compression-webpack-plugin");
 
 // const Es3ifyPlugin = require('es3ify-webpack-plugin')
 
@@ -45,18 +46,18 @@ module.exports = (env, argument) => {
     ]
   }
 
-  const pageCategory = 'top'
-
-  // JavaScriptの出力ファイル（★）をカレントディレクトリとして設定
-  const distStyle = `./../../../${pageCategory}/css/shared/substyle.min.css`
-  //const distStyle = `./../../../../${pageCategory}/css/shared/substyle.min.css`
-
   const CONFIG = {
     mode: MODE,
-    entry: `./src/${pageCategory}/index.js`,
+    entry:
+      {
+        'top': './src/top/index.js',
+        'common': './src/common/index.js',
+        'category/work': './src/category/work/index.js',
+        'category/profile': './src/category/profile/index.js'
+      },
     output: {
-      path: `${__dirname}/${pageCategory}/js/shared`, //  出力ファイルのディレクトリ名（★）
-      filename: 'index.min.js' // 出力ファイル名
+      path: `${__dirname}`, //  出力ファイルのディレクトリ名（★）
+      filename: '[name]/js/shared/index.min.js' // 出力ファイル名
     },
     module: {
       rules: [
@@ -158,8 +159,14 @@ module.exports = (env, argument) => {
       extensions: ['*', '.ts', '.js', '.tsx', '.jsx', '.vue', '.json'] // 拡張子を配列で指定
     },
     plugins: [
+      new CompressionPlugin({
+        test: /\.(css)|(js)$/,
+        compressionOptions: {
+          level: 9
+        }
+      }),
       new MiniCssExtractPlugin({
-        filename: distStyle
+        filename: '[name]/css/shared/substyle.min.css'
       }),
       new VueLoaderPlugin(), // Vueを読み込めるようにするため
       new ESLintPlugin({
@@ -190,5 +197,6 @@ module.exports = (env, argument) => {
     target: ['web', 'es5'] // ES5(IE11等)向けの指定
   }
 
+  console.log(CONFIG.output)
   return CONFIG
 }

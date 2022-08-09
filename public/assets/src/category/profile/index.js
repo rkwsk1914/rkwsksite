@@ -13,8 +13,8 @@ import '@fortawesome/fontawesome-free/js/regular'
 --------------------------------------------------------------------------------- */
 import './../../style/category/profile/index.scss'
 import 'animate.css'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+// import 'slick-carousel/slick/slick.css'
+// import 'slick-carousel/slick/slick-theme.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 /* ---------------------------------------------------------------------------------
