@@ -7,9 +7,7 @@
     <meta name="description" content="Ryo Kawasaki portfolio site">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        
-    </style>
+    <link rel="stylesheet" href={{ asset('assets/top/css/shared/substyle.min.css', $is_production) }}>
 </head>
 
 <body class="index-container animate__animated js-animate-fade">
