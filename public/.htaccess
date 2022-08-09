@@ -33,5 +33,5 @@
         AddEncoding x-gzip .gz
     </FilesMatch>
 
-    Header append Vary Accept-Encoding env=!dont-vary
+    #Header append Vary Accept-Encoding env=!dont-vary
 </IfModule>
