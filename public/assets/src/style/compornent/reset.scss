@@ -7,6 +7,12 @@ body {
   @extend .inheritance-font-base;
 }
 
+img {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
 section {
   width: 100%;
   position: relative;

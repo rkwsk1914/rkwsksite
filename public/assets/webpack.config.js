@@ -45,7 +45,7 @@ module.exports = (env, argument) => {
     ]
   }
 
-  const pageCategory = 'common'
+  const pageCategory = 'top'
 
   // JavaScriptの出力ファイル（★）をカレントディレクトリとして設定
   const distStyle = `./../../../${pageCategory}/css/shared/substyle.min.css`
