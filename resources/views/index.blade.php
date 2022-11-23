@@ -127,17 +127,15 @@
                         <a class="profile-section__link-box__button" href="/profile">Detail</a>
                         <h3>川﨑 亮 <small>Kawasaki Ryo</small></h3>
                         <p>
-                            2022年現在 Web制作会社にて、フロントエンドエンジニアとして活動中。
+                            2022年現在 フロントエンドエンジニアとしてフリーランス活動中。
                         </p>
                         <p>
-                            10名規模のコーディングチームのサブリーダーを担当。<br>
+                            10名規模のコーディングチームのサブリーダーも経験。<br>
                             工数見積・要件定義・詳細設計・スタッフアサイン調整などのマネジメント業務に加え、<br>
                             マークアップやフロントエンドの動的コンテンツなどのコーディング業務も遂行。
                         </p>
                         <p>
-                            主な実装経験は、<br>
-                            Ajax+JSONを用いた非同期処理による店舗一覧の検索と表示。<br>
-                            JavaScript・React・TypeScriptを用いて、シュミレータやタイムセールバナーの実装。<br>
+                            主な実務経験は、React・TypeScriptを用いたフロントエンド開発<br>
                             新規顧客のECサイト立ち上げで、Shopifyにおける独自デザインの実装。<br>
                         </p>
                         <a class="profile-section__link-box__button"
